@@ -15,7 +15,9 @@ app.use(cors());
 
 // connect to mlab database
 // use your own db string & credentials
-mongoose.connect();
+mongoose.connect(
+  "mongodb+srv://Jason:test123@cluster0.75sw1.mongodb.net/Cluster0GraphQL?retryWrites=true&w=majority"
+);
 mongoose.connection.once("open", () => {
   console.log("connected to database");
 });
